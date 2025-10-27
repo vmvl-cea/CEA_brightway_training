@@ -24,6 +24,7 @@ pages:
     - *create_venv
     - uv pip install -U sphinx myst-parser furo
   script:
+    - jupyter nbconvert --to markdown ./docs/source/pages/tutoBW_EV.ipynb
     - sphinx-build -b html docs/source/ public/
   artifacts:
     paths:

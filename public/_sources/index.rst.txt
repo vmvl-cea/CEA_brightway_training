@@ -15,5 +15,6 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-   pages/README
+   pages/main
+   pages/tutoBW_EV
 
