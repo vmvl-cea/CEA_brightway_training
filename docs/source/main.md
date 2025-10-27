@@ -1,7 +1,7 @@
 # Prerequisites
 
 
-[DOWNLOAD](_static/tutoBW_EV.ipynb)
+[DOWNLOAD](./tutoBW_EV.ipynb)
 
 * Open the Software Center ("Centre Logiciel") and install Visual Studio Code
 * In VS code : install the following extensions:
