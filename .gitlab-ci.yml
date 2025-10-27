@@ -22,7 +22,7 @@ pages:
   image: python:3.12-slim
   before_script:
     - *create_venv
-    - uv pip install -U sphinx myst-parser furo
+    - uv pip install -U sphinx myst-parser furo jupyter
   script:
     - jupyter nbconvert --to markdown ./docs/source/pages/tutoBW_EV.ipynb
     - sphinx-build -b html docs/source/ public/
