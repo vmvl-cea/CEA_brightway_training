@@ -19,7 +19,7 @@ cache:
 
 pages:
   stage: build
-  image: brightway_training
+  image: python:3.12-slim
   before_script:
     - *create_venv
     - uv pip install -U jupyter sphinx myst-parser furo 
