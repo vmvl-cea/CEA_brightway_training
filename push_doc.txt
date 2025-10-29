@@ -1,7 +1,4 @@
 cd build
-git init
-git remote add origin https://github.com/<your-username>/myproject-docs.git
-git checkout -b gh-pages
 git add .
-git commit -m "Initial site build"
-git push -f origin gh-pages
+git commit -m "Update site $(date)"
+git push origin gh-pages
