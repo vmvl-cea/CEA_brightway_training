@@ -19,12 +19,12 @@ cache:
 
 pages:
   stage: build
-  image: python:3.12-slim
+  image: brightway_training
   before_script:
     - *create_venv
     - uv pip install -U jupyter sphinx myst-parser furo 
   script:
-    - jupyter nbconvert --to markdown ./docs/source/tutoBW_EV.ipynb
+    - jupyter nbconvert --to markdown ./docs/source/tutorials/bw25_notebook_EV.ipynb
     - sphinx-build -b html docs/source/ public/
   artifacts:
     paths:
