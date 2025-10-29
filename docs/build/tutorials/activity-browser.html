@@ -3,12 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Setting up a Python Environment for Brightway" href="../installation/bw_env.html" /><link rel="prev" title="Python Environment for Brightway" href="python_env.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="II. Notebook" href="bw25_notebook_EV.html" /><link rel="prev" title="Installation of VS code" href="../installation/vscode.html" />
+        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/tutorials/activity-browser.html" />
         <link rel="prefetch" href="../_static/BW_black_transparent_square.png" as="image" />
         <link rel="prefetch" href="../_static/BW_white_transparent_square.png" as="image" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Brightway theory - Brightway training</title>
+        <title>I. Activity Browser - Brightway training</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -204,9 +205,9 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Useful knowledge</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python Environment for Brightway</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Brightway theory</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../knowledge/python_env.html">Python Environment for Brightway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../knowledge/brightway_th.html">Brightway theory</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
@@ -214,9 +215,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation/vscode.html">Installation of VS code</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/activity-browser.html">I. Activity Browser</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/bw25_notebook_EV.html">II. Notebook</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">I. Activity Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bw25_notebook_EV.html">II. Notebook</a></li>
 </ul>
 
 </div>
@@ -237,7 +238,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/knowledge/brightway_th.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/tutorials/activity-browser.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -257,61 +258,126 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="brightway-theory">
-<h1>Brightway theory<a class="headerlink" href="#brightway-theory" title="Link to this heading">¶</a></h1>
-<p>Just for clarification, abbreviations used in the markdown cells of this notebook are:</p>
-<div class="table-wrapper colwidths-auto docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Abbreviation(s)</p></th>
-<th class="head"><p>Written out</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>bw, BW2</p></td>
-<td><p>Brightway2</p></td>
-</tr>
-<tr class="row-odd"><td><p>FU</p></td>
-<td><p>Functional unit</p></td>
-</tr>
-<tr class="row-even"><td><p>LCA</p></td>
-<td><p>Life cycle assessment</p></td>
-</tr>
-<tr class="row-odd"><td><p>LCI</p></td>
-<td><p>Life cycle inventory</p></td>
-</tr>
-<tr class="row-even"><td><p>LCIA</p></td>
-<td><p>Life cycle impact assessment</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
-<section id="recap-on-lca">
-<h2>Recap on LCA<a class="headerlink" href="#recap-on-lca" title="Link to this heading">¶</a></h2>
-<p>To make sure we are on the same page, let’s recapitulate the basics of LCA, expressed in a single formula (the notation may differ to the one that you are familiar with):</p>
-<p>$$h = CBA^{-1}f$$</p>
-<p>where:</p>
+          <section id="i-activity-browser">
+<h1>I. Activity Browser<a class="headerlink" href="#i-activity-browser" title="Link to this heading">¶</a></h1>
+<section id="open-project">
+<h2>Open project<a class="headerlink" href="#open-project" title="Link to this heading">¶</a></h2>
+<section id="open-activity-browser">
+<h3>Open Activity-Browser<a class="headerlink" href="#open-activity-browser" title="Link to this heading">¶</a></h3>
+<p>Use commands in the Miniforge prompt:
+• Search Miniforge prompt and open it
+• Run the following commands (replace conda with micromamba if you have it installed):
+conda a c t i v a t e bw2
+a c t i v i t y −browser
+and wait few seconds. “bw2” is the environment’s name where AB is installed.</p>
+</section>
+<section id="import-data">
+<h3>Import data<a class="headerlink" href="#import-data" title="Link to this heading">¶</a></h3>
+<p>A partial LCA modelisation has been created on AB for this TP. You will download source files and install them on AB.
+Download source files:
+S:\370-Energie\370.25-BATTERIES\370.25.311-Formation_Brightway\tuto_EV
+Import project:
+• In your AB interface, in Projects, select “ecoinvent311”.
+• Import Database:
+– Import tuto_EV-ab.xslx by clicking on Import, then Import local data, then Local
+Excel file, then Browse and search the file.
+After clicking on Import Database, a new window DATABASE LINKING opens. Select ecoinvent-3.11-cutoff in the drop-down menu</p>
+</section>
+</section>
+<section id="compute-and-understand-impacts">
+<h2>Compute and understand impacts<a class="headerlink" href="#compute-and-understand-impacts" title="Link to this heading">¶</a></h2>
+<section id="add-a-calculation-setup">
+<h3>Add a calculation setup<a class="headerlink" href="#add-a-calculation-setup" title="Link to this heading">¶</a></h3>
+<p>In LCA Setup, add a new calculation setup by clicking on New, and name it Lifecycle.</p>
+</section>
+<section id="choose-impacts-categories">
+<h3>Choose impacts categories<a class="headerlink" href="#choose-impacts-categories" title="Link to this heading">¶</a></h3>
+<p>AB only computes impacts you choose. You then need to select the indicators you want to compute. You can choose in this list of EF 3.1 indicators:
+• climate change | global warming potential (GWP100)
+• material resources: metals/minerals | abiotic depletion potential (ADP): elements (ul- timate reserves)
+• energy resources: non-renewable | abiotic depletion potential (ADP) : fossil fuels
+• acidification | accumulated exceedance (AE)
+• ecotoxicity: freshwater | comparative toxic unit for ecosystems (CTUe)
+• human toxicity: carcinogenic | comparative toxic unit for human (CTUh)
+• human toxicity : non-carcinogenic | comparative toxic unit for human (CTUh)
+• eutrophication: freshwater | fraction of nutrients reaching freshwater end compartment (P)
+• eutrophication: marine | fraction of nutrients reaching marine end compartment (N)
+• eutrophication: terrestrial | accumulated exceedance (AE)
+• ionising radiation: human health | human exposure efficiency relative to u235
+• land use | soil quality index
+• ozone depletion | ozone depletion potential (ODP)
+• particulate matter formation | impact on human health
+• photochemical oxidant formation: human health | tropospheric ozone concentration increase
+• water use | user deprivation potential (deprivation-weighted water consumption)
+For this TP, choose the Climate Change indicator + 1 or 2 other indicators by
+adding them in your calculation setup in Impact categories by a click and drag from the Impact Categories tab</p>
+</section>
+<section id="calculate-and-interpret-the-impacts">
+<h3>Calculate and interpret the impacts<a class="headerlink" href="#calculate-and-interpret-the-impacts" title="Link to this heading">¶</a></h3>
+<section id="lifecycle">
+<h4>Lifecycle<a class="headerlink" href="#lifecycle" title="Link to this heading">¶</a></h4>
+<p>• Open your excel imported database tuto_EV-ab, and search Lifecycle.
+• Click on it to read the description of this activity, and drag it to Reference flows.
+• Open your ecoinvent-3.11-cutoff db and search for the activity of an internal combustion engine (ICE) car called market for transport, passenger, car, petrol, medium size, EURO 4, drag it in Reference Flow to compare this activity with the Lifecycle of the EV vehicle one.
+• Click on calculate.
+• Check the Climate change results</p>
+<p>Do you think the activity Lifecycle has a great/little/normal impact for an EV in France? and compared to the ICE car ?
+Look at the Sankey Diagram for Lifecycle and identify an anomaly. You will correct it at the next part.
+Graph Explorer:
+Go to the tuto_EV-ab database, and right-click on Lifecycle. Select Open activity in Graph Explorer. Explore the graph.</p>
+</section>
+<section id="production-contribution">
+<h4>Production – contribution<a class="headerlink" href="#production-contribution" title="Link to this heading">¶</a></h4>
 <ul class="simple">
-<li><p>$A$… technosphere matrix (dimensions <em>p x p</em>)</p></li>
-<li><p>$B$… biosphere matrix (dimensions <em>q x p</em>)</p></li>
-<li><p>$C$… characterisation matrix (dimensions <em>r x q</em>)</p></li>
-<li><p>$f$… final demand vector (dimensions <em>p x 1</em>)</p></li>
-<li><p>$h$… characterised inventory matrix (dimensions <em>r x 1</em>)</p></li>
+<li><p>Add a new calculation setup, and name it Production</p></li>
+<li><p>Drag and drop the activity Production from your tuto_EV-ab database to Reference flows</p></li>
+<li><p>Drag and drop the impact categories you want to calculate</p></li>
+<li><p>Click on Calculate</p></li>
+<li><p>In the “LCA Results” tab, go to FT Contributions
+You can see that the battery accounts for a big part of the vehicle’s production impacts !</p></li>
 </ul>
-<p>with the dimensions being:</p>
-<ul class="simple">
-<li><p><em>p</em>… number of products/processes</p></li>
-<li><p><em>q</em>… number of elementary flows</p></li>
-<li><p><em>r</em>… number of impact categories</p></li>
-</ul>
-<p>Specific parts of the above formula have distinct names. Since these names are also used in the Brightway2-framework, we will note them down here:</p>
-<ul class="simple">
-<li><p>$f$… demand array</p></li>
-<li><p>$A{^-1}f$… supply array</p></li>
-<li><p>$BA{^-1}f$… inventory referred sometimes as b</p></li>
-<li><p>$CBA{^-1}f$… characterised inventory</p></li>
-</ul>
+</section>
+</section>
+</section>
+<section id="edit-model">
+<h2>Edit model<a class="headerlink" href="#edit-model" title="Link to this heading">¶</a></h2>
+<section id="modify-activities">
+<h3>Modify activities<a class="headerlink" href="#modify-activities" title="Link to this heading">¶</a></h3>
+<p>Delete exchanges:
+Uncheck the Read-only box in the database list, and go to the activity identified in section 2.3.1 to delete the anomaly
+(right-click &gt; delete Exchange).
+Add new exchanges :
+The electricity consumed during the lifetime of the battery in the vehicle needs to be added. Add it to Use, with a click and drag from ecoinvent-3.11-cutoff database to Technosphere flows, and change the amount:
+Modifications
+Modifications areare lockedlocked atat 22 levels.levels. DatabasesDatabases areare lockedlocked whenwhen ReadRead–onlyonly isis checked,checked, and and activitiesactivities areare lockedlocked whenwhen EditEdit activityactivity (in(in eacheach activity)activity) isis checked.checked.</p>
+</section>
+<section id="add-formulas">
+<h3>Add formulas<a class="headerlink" href="#add-formulas" title="Link to this heading">¶</a></h3>
+<p>• In the Parameter tab in Database, create 3 “Database parameters”, as in the picture below:
+• Go to Use activity, and write the following formula:
+• Go to Lifecycle activity, and write the following formulas:
+• Calculate the impacts generated in Lifecycle calculation setup. Go to Overview (in LCA results tab) and export table in Excel or CSV format.
+• Go back to Parameters and modify efficiency value to 100 (Wh/km). Calculate the new impacts and compare them with your export.
+Is the efficiency of the vehicle a significant factor in LCA results? For all your indicators?</p>
+</section>
+<section id="add-scenarios">
+<h3>Add scenarios<a class="headerlink" href="#add-scenarios" title="Link to this heading">¶</a></h3>
+<p>effivciency
+efficiency</p>
+<p>Use a pre-built scenario:
+• In LCA setup tab, take the Lifecycle calculation setup and change Standard LCA to Scenario LCA.
+• In Scenario, click on Add scenario and browse Scenarios-tuto_EV-ab.xlsx.
+• Visualize the parameters values in Parameters tab &gt; Scenarios tab.
+• Calculate the impacts and interpret the results.
+Build your own scenarios:
+Modify the Excel file to create new scenarios:</p>
+<ol class="arabic simple">
+<li><p>Tesla model Y (<a class="reference external" href="https://ev-database.org/car/3103/Tesla-Model-Y-RWD">https://ev-database.org/car/3103/Tesla-Model-Y-RWD</a>)</p></li>
+<li><p>Total_distance = 300 000 km</p></li>
+<li><p>Whatever you want
+Import the new Excel, calculate and interpret the results.</p></li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -320,23 +386,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../installation/bw_env.html">
+          <a class="next-page" href="bw25_notebook_EV.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Setting up a Python Environment for Brightway</div>
+                <div class="title">II. Notebook</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="python_env.html">
+          <a class="prev-page" href="../installation/vscode.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Python Environment for Brightway</div>
+                <div class="title">Installation of VS code</div>
                 
               </div>
             </a>
@@ -370,8 +436,28 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Brightway theory</a><ul>
-<li><a class="reference internal" href="#recap-on-lca">Recap on LCA</a></li>
+<li><a class="reference internal" href="#">I. Activity Browser</a><ul>
+<li><a class="reference internal" href="#open-project">Open project</a><ul>
+<li><a class="reference internal" href="#open-activity-browser">Open Activity-Browser</a></li>
+<li><a class="reference internal" href="#import-data">Import data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compute-and-understand-impacts">Compute and understand impacts</a><ul>
+<li><a class="reference internal" href="#add-a-calculation-setup">Add a calculation setup</a></li>
+<li><a class="reference internal" href="#choose-impacts-categories">Choose impacts categories</a></li>
+<li><a class="reference internal" href="#calculate-and-interpret-the-impacts">Calculate and interpret the impacts</a><ul>
+<li><a class="reference internal" href="#lifecycle">Lifecycle</a></li>
+<li><a class="reference internal" href="#production-contribution">Production – contribution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#edit-model">Edit model</a><ul>
+<li><a class="reference internal" href="#modify-activities">Modify activities</a></li>
+<li><a class="reference internal" href="#add-formulas">Add formulas</a></li>
+<li><a class="reference internal" href="#add-scenarios">Add scenarios</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

@@ -36,3 +36,5 @@ html_context = {
     "license_name": "Creative Commons Attribution 4.0 International",
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
 }
+
+html_baseurl = "https://vmvl-cea.github.io/CEA_brightway_training/"

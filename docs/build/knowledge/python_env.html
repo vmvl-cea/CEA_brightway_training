@@ -3,12 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="II. Notebook" href="bw25_notebook_EV.html" /><link rel="prev" title="Installation of VS code" href="../installation/vscode.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Brightway theory" href="brightway_th.html" /><link rel="prev" title="CEA Brightway training" href="../index.html" />
+        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/knowledge/python_env.html" />
         <link rel="prefetch" href="../_static/BW_black_transparent_square.png" as="image" />
         <link rel="prefetch" href="../_static/BW_white_transparent_square.png" as="image" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>I. Activity Browser - Brightway training</title>
+        <title>Python Environment for Brightway - Brightway training</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -204,9 +205,9 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Useful knowledge</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../knowledge/python_env.html">Python Environment for Brightway</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../knowledge/brightway_th.html">Brightway theory</a></li>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python Environment for Brightway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="brightway_th.html">Brightway theory</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul>
@@ -214,9 +215,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation/vscode.html">Installation of VS code</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">I. Activity Browser</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bw25_notebook_EV.html">II. Notebook</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/activity-browser.html">I. Activity Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/bw25_notebook_EV.html">II. Notebook</a></li>
 </ul>
 
 </div>
@@ -237,7 +238,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/tutorials/activity-browser.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/knowledge/python_env.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -257,126 +258,33 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="i-activity-browser">
-<h1>I. Activity Browser<a class="headerlink" href="#i-activity-browser" title="Link to this heading">¶</a></h1>
-<section id="open-project">
-<h2>Open project<a class="headerlink" href="#open-project" title="Link to this heading">¶</a></h2>
-<section id="open-activity-browser">
-<h3>Open Activity-Browser<a class="headerlink" href="#open-activity-browser" title="Link to this heading">¶</a></h3>
-<p>Use commands in the Miniforge prompt:
-• Search Miniforge prompt and open it
-• Run the following commands (replace conda with micromamba if you have it installed):
-conda a c t i v a t e bw2
-a c t i v i t y −browser
-and wait few seconds. “bw2” is the environment’s name where AB is installed.</p>
-</section>
-<section id="import-data">
-<h3>Import data<a class="headerlink" href="#import-data" title="Link to this heading">¶</a></h3>
-<p>A partial LCA modelisation has been created on AB for this TP. You will download source files and install them on AB.
-Download source files:
-S:\370-Energie\370.25-BATTERIES\370.25.311-Formation_Brightway\tuto_EV
-Import project:
-• In your AB interface, in Projects, select “ecoinvent311”.
-• Import Database:
-– Import tuto_EV-ab.xslx by clicking on Import, then Import local data, then Local
-Excel file, then Browse and search the file.
-After clicking on Import Database, a new window DATABASE LINKING opens. Select ecoinvent-3.11-cutoff in the drop-down menu</p>
-</section>
-</section>
-<section id="compute-and-understand-impacts">
-<h2>Compute and understand impacts<a class="headerlink" href="#compute-and-understand-impacts" title="Link to this heading">¶</a></h2>
-<section id="add-a-calculation-setup">
-<h3>Add a calculation setup<a class="headerlink" href="#add-a-calculation-setup" title="Link to this heading">¶</a></h3>
-<p>In LCA Setup, add a new calculation setup by clicking on New, and name it Lifecycle.</p>
-</section>
-<section id="choose-impacts-categories">
-<h3>Choose impacts categories<a class="headerlink" href="#choose-impacts-categories" title="Link to this heading">¶</a></h3>
-<p>AB only computes impacts you choose. You then need to select the indicators you want to compute. You can choose in this list of EF 3.1 indicators:
-• climate change | global warming potential (GWP100)
-• material resources: metals/minerals | abiotic depletion potential (ADP): elements (ul- timate reserves)
-• energy resources: non-renewable | abiotic depletion potential (ADP) : fossil fuels
-• acidification | accumulated exceedance (AE)
-• ecotoxicity: freshwater | comparative toxic unit for ecosystems (CTUe)
-• human toxicity: carcinogenic | comparative toxic unit for human (CTUh)
-• human toxicity : non-carcinogenic | comparative toxic unit for human (CTUh)
-• eutrophication: freshwater | fraction of nutrients reaching freshwater end compartment (P)
-• eutrophication: marine | fraction of nutrients reaching marine end compartment (N)
-• eutrophication: terrestrial | accumulated exceedance (AE)
-• ionising radiation: human health | human exposure efficiency relative to u235
-• land use | soil quality index
-• ozone depletion | ozone depletion potential (ODP)
-• particulate matter formation | impact on human health
-• photochemical oxidant formation: human health | tropospheric ozone concentration increase
-• water use | user deprivation potential (deprivation-weighted water consumption)
-For this TP, choose the Climate Change indicator + 1 or 2 other indicators by
-adding them in your calculation setup in Impact categories by a click and drag from the Impact Categories tab</p>
-</section>
-<section id="calculate-and-interpret-the-impacts">
-<h3>Calculate and interpret the impacts<a class="headerlink" href="#calculate-and-interpret-the-impacts" title="Link to this heading">¶</a></h3>
-<section id="lifecycle">
-<h4>Lifecycle<a class="headerlink" href="#lifecycle" title="Link to this heading">¶</a></h4>
-<p>• Open your excel imported database tuto_EV-ab, and search Lifecycle.
-• Click on it to read the description of this activity, and drag it to Reference flows.
-• Open your ecoinvent-3.11-cutoff db and search for the activity of an internal combustion engine (ICE) car called market for transport, passenger, car, petrol, medium size, EURO 4, drag it in Reference Flow to compare this activity with the Lifecycle of the EV vehicle one.
-• Click on calculate.
-• Check the Climate change results</p>
-<p>Do you think the activity Lifecycle has a great/little/normal impact for an EV in France? and compared to the ICE car ?
-Look at the Sankey Diagram for Lifecycle and identify an anomaly. You will correct it at the next part.
-Graph Explorer:
-Go to the tuto_EV-ab database, and right-click on Lifecycle. Select Open activity in Graph Explorer. Explore the graph.</p>
-</section>
-<section id="production-contribution">
-<h4>Production – contribution<a class="headerlink" href="#production-contribution" title="Link to this heading">¶</a></h4>
+          <section id="python-environment-for-brightway">
+<h1>Python Environment for Brightway<a class="headerlink" href="#python-environment-for-brightway" title="Link to this heading">¶</a></h1>
+<p>To use Brightway on your computer, we install it in a specific <strong>Python Envrionment</strong>. This is a general Python good practice, allowing to keep a clean version of Brightway (and all the packages it requires) isolated from any other Python project you may have.</p>
+<section id="what-is-a-python-environment">
+<h2>🐍 What is a Python Environment?<a class="headerlink" href="#what-is-a-python-environment" title="Link to this heading">¶</a></h2>
+<p>A <strong>Python environment</strong> is like a <em>workspace</em> where you can install and use specific Python tools and libraries without interfering with other projects on your computer.</p>
+<p>Think of it as a <strong>sandbox</strong> that keeps everything isolated:</p>
 <ul class="simple">
-<li><p>Add a new calculation setup, and name it Production</p></li>
-<li><p>Drag and drop the activity Production from your tuto_EV-ab database to Reference flows</p></li>
-<li><p>Drag and drop the impact categories you want to calculate</p></li>
-<li><p>Click on Calculate</p></li>
-<li><p>In the “LCA Results” tab, go to FT Contributions
-You can see that the battery accounts for a big part of the vehicle’s production impacts !</p></li>
+<li><p>Each environment have its <strong>own version of Python</strong> (e.g., 3.10 vs. 3.12), which can thus be different than the base one on your computer.</p></li>
+<li><p>Each environment have <strong>its own set of packages</strong> (e.g., Brightway, NumPy, Pandas, etc.).</p></li>
+<li><p>This prevents conflicts — for example, one project might need an older library version, while another needs the latest one.</p></li>
 </ul>
+<p>This isolation is especially useful in scientific computing, where different tools often have strict package version requirements.</p>
+<p>You will see later how to create and manage this environment.</p>
+<p>On your computer, you can have as many python environment as you wish, in addition to the <code class="docutils literal notranslate"><span class="pre">base</span></code> one (the one used by default).</p>
+<p><img alt="Alt Text" src="../_images/python_virtual_environments.png" /></p>
+<p>They are stored locally in your computer, typically here : <code class="docutils literal notranslate"><span class="pre">C:\Users\AB123456\AppData\Local\miniforge3\envs</span></code>. Inside this folder, there is the Python executable <code class="docutils literal notranslate"><span class="pre">python.exe</span></code> of the Python version of the environment. There is also the code of all the librairies and packages (in <code class="docutils literal notranslate"><span class="pre">env_name\lib\site-package</span></code>). This is why you can have a different version of Python and different versions of the libraries in each environment.</p>
 </section>
-</section>
-</section>
-<section id="edit-model">
-<h2>Edit model<a class="headerlink" href="#edit-model" title="Link to this heading">¶</a></h2>
-<section id="modify-activities">
-<h3>Modify activities<a class="headerlink" href="#modify-activities" title="Link to this heading">¶</a></h3>
-<p>Delete exchanges:
-Uncheck the Read-only box in the database list, and go to the activity identified in section 2.3.1 to delete the anomaly
-(right-click &gt; delete Exchange).
-Add new exchanges :
-The electricity consumed during the lifetime of the battery in the vehicle needs to be added. Add it to Use, with a click and drag from ecoinvent-3.11-cutoff database to Technosphere flows, and change the amount:
-Modifications
-Modifications areare lockedlocked atat 22 levels.levels. DatabasesDatabases areare lockedlocked whenwhen ReadRead–onlyonly isis checked,checked, and and activitiesactivities areare lockedlocked whenwhen EditEdit activityactivity (in(in eacheach activity)activity) isis checked.checked.</p>
-</section>
-<section id="add-formulas">
-<h3>Add formulas<a class="headerlink" href="#add-formulas" title="Link to this heading">¶</a></h3>
-<p>• In the Parameter tab in Database, create 3 “Database parameters”, as in the picture below:
-• Go to Use activity, and write the following formula:
-• Go to Lifecycle activity, and write the following formulas:
-• Calculate the impacts generated in Lifecycle calculation setup. Go to Overview (in LCA results tab) and export table in Excel or CSV format.
-• Go back to Parameters and modify efficiency value to 100 (Wh/km). Calculate the new impacts and compare them with your export.
-Is the efficiency of the vehicle a significant factor in LCA results? For all your indicators?</p>
-</section>
-<section id="add-scenarios">
-<h3>Add scenarios<a class="headerlink" href="#add-scenarios" title="Link to this heading">¶</a></h3>
-<p>effivciency
-efficiency</p>
-<p>Use a pre-built scenario:
-• In LCA setup tab, take the Lifecycle calculation setup and change Standard LCA to Scenario LCA.
-• In Scenario, click on Add scenario and browse Scenarios-tuto_EV-ab.xlsx.
-• Visualize the parameters values in Parameters tab &gt; Scenarios tab.
-• Calculate the impacts and interpret the results.
-Build your own scenarios:
-Modify the Excel file to create new scenarios:</p>
-<ol class="arabic simple">
-<li><p>Tesla model Y (<a class="reference external" href="https://ev-database.org/car/3103/Tesla-Model-Y-RWD">https://ev-database.org/car/3103/Tesla-Model-Y-RWD</a>)</p></li>
-<li><p>Total_distance = 300 000 km</p></li>
-<li><p>Whatever you want
-Import the new Excel, calculate and interpret the results.</p></li>
-</ol>
-</section>
+<section id="python-environment-and-brightway-projects">
+<h2>Python Environment and Brightway Projects<a class="headerlink" href="#python-environment-and-brightway-projects" title="Link to this heading">¶</a></h2>
+<p><strong>Python Environments</strong> on your computers are just workspaces in which to run python files and python-based software. These files and folders are independant from the environments. Thus:</p>
+<ul class="simple">
+<li><p>Creating or deleting Python environments has no impact on other projects files and folders, e.g. Brightway files and folders</p></li>
+<li><p>Creating or deleting files and folders related to python-based software has no impact on Python environments.</p></li>
+</ul>
+<p>Brightway projects files are each stored in project-folders on your computers, usually here: <code class="docutils literal notranslate"><span class="pre">C:\Users\AB123456\AppData\Local\pylca\Brightway3</span></code></p>
+<p><strong>TODO</strong> Picture with bw files and folders compared to python env files and folders.</p>
 </section>
 </section>
 
@@ -385,23 +293,23 @@ Import the new Excel, calculate and interpret the results.</p></li>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="bw25_notebook_EV.html">
+          <a class="next-page" href="brightway_th.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">II. Notebook</div>
+                <div class="title">Brightway theory</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../installation/vscode.html">
+          <a class="prev-page" href="../index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Installation of VS code</div>
+                <div class="title">Home</div>
                 
               </div>
             </a>
@@ -435,28 +343,9 @@ Import the new Excel, calculate and interpret the results.</p></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">I. Activity Browser</a><ul>
-<li><a class="reference internal" href="#open-project">Open project</a><ul>
-<li><a class="reference internal" href="#open-activity-browser">Open Activity-Browser</a></li>
-<li><a class="reference internal" href="#import-data">Import data</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#compute-and-understand-impacts">Compute and understand impacts</a><ul>
-<li><a class="reference internal" href="#add-a-calculation-setup">Add a calculation setup</a></li>
-<li><a class="reference internal" href="#choose-impacts-categories">Choose impacts categories</a></li>
-<li><a class="reference internal" href="#calculate-and-interpret-the-impacts">Calculate and interpret the impacts</a><ul>
-<li><a class="reference internal" href="#lifecycle">Lifecycle</a></li>
-<li><a class="reference internal" href="#production-contribution">Production – contribution</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#edit-model">Edit model</a><ul>
-<li><a class="reference internal" href="#modify-activities">Modify activities</a></li>
-<li><a class="reference internal" href="#add-formulas">Add formulas</a></li>
-<li><a class="reference internal" href="#add-scenarios">Add scenarios</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">Python Environment for Brightway</a><ul>
+<li><a class="reference internal" href="#what-is-a-python-environment">🐍 What is a Python Environment?</a></li>
+<li><a class="reference internal" href="#python-environment-and-brightway-projects">Python Environment and Brightway Projects</a></li>
 </ul>
 </li>
 </ul>
