@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Installation of VS code" href="vscode.html" /><link rel="prev" title="Brightway theory" href="../knowledge/brightway_th.html" />
-        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/installation/bw_env.html" />
-        <link rel="prefetch" href="../_static/BW_black_transparent_square.png" as="image" />
-        <link rel="prefetch" href="../_static/BW_white_transparent_square.png" as="image" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="II. Brightway" href="setup_partB.html" /><link rel="prev" title="Python environments" href="python_env.html" />
+        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/installation/setup_partA.html" />
+        <link rel="prefetch" href="../_static/LOGO CEA_ORIGINAL.png" as="image" />
+        <link rel="prefetch" href="../_static/LOGO CEA_BLANC SUR NOIR.png" as="image" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Setting up a Python Environment for Brightway - Brightway training</title>
+        <title>I. Conda and VScode - Brightway training</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -192,8 +192,8 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo only-light" src="../_static/BW_black_transparent_square.png" alt="Light Logo"/>
-    <img class="sidebar-logo only-dark" src="../_static/BW_white_transparent_square.png" alt="Dark Logo"/>
+    <img class="sidebar-logo only-light" src="../_static/LOGO CEA_ORIGINAL.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/LOGO CEA_BLANC SUR NOIR.png" alt="Dark Logo"/>
   </div>
   
   <span class="sidebar-brand-text">Brightway training</span>
@@ -204,15 +204,17 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Useful knowledge</span></p>
+  <p class="caption" role="heading"><span class="caption-text">About Brightway</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../knowledge/python_env.html">Python Environment for Brightway</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../knowledge/brightway_th.html">Brightway theory</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<p class="caption" role="heading"><span class="caption-text">Setup</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Setting up a Python Environment for Brightway</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vscode.html">Installation of VS code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_condensed.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environments</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">I. Conda and VScode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partB.html">II. Brightway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partC.html">III. Ecoinvent</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -238,7 +240,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/installation/bw_env.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/installation/setup_partA.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -258,54 +260,37 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="setting-up-a-python-environment-for-brightway">
-<h1>Setting up a Python Environment for Brightway<a class="headerlink" href="#setting-up-a-python-environment-for-brightway" title="Link to this heading">¶</a></h1>
-<section id="managing-python-environments-with-conda">
-<h2>⚙️ Managing Python Environments with Conda<a class="headerlink" href="#managing-python-environments-with-conda" title="Link to this heading">¶</a></h2>
-<p><strong>Conda</strong> is a popular tool to create and manage these Python environments. It comes with the free <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> installer (authorized for use at CEA), which installs the <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">mamba</span></code> commands on your computer.</p>
+          <section id="i-conda-and-vscode">
+<h1>I. Conda and VScode<a class="headerlink" href="#i-conda-and-vscode" title="Link to this heading">¶</a></h1>
+<p>In this section, we install Brightway 2.5 in a dedicated environment on your computer.</p>
+<p>We will do so using the Python environment manager <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+<section id="install-conda">
+<h2>1. Install Conda<a class="headerlink" href="#install-conda" title="Link to this heading">¶</a></h2>
+<p><strong>Conda</strong> is a popular tool to create and manage Python environments. It comes with the free <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a> distribution (authorized for use at CEA), which installs both <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">mamba</span></code> commands in your terminals.</p>
 <p>Note: <a class="reference external" href="https://www.anaconda.com/download">Anaconda</a> and <a class="reference external" href="https://www.anaconda.com/docs/getting-started/miniconda/main">Miniconda</a> <strong>cannot</strong> be used as the CEA does not pay a licence for them, cf. the <a class="reference external" href="https://portail.intra.cea.fr/grenoble/sti/Pages/Vous%20aider/Poste%20de%20travail/Anaconda.aspx">STIC notice</a>)</p>
-<section id="installing-conda">
-<h3>1. Installing Conda<a class="headerlink" href="#installing-conda" title="Link to this heading">¶</a></h3>
-<p>Install <code class="docutils literal notranslate"><span class="pre">Miniforge</span></code> from CEA’s software center.</p>
-<p>Open a terminal (search for ‘cmd’ or ‘command prompt’ in Windows Start menu) and run the following line:</p>
+<ol class="arabic">
+<li><p>Install <strong>Miniforge</strong> from CEA’s software center.</p></li>
+<li><p>Open a terminal and activate <strong>Conda</strong> commands on your computer by running:</p>
 <div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda init
 </pre></div>
 </div>
-<p>This will activate the <code class="docutils literal notranslate"><span class="pre">conda</span></code> commands in your terminal.</p>
-<p>Close the terminal.</p>
-</section>
-<section id="create-a-new-environment-with-brightway">
-<h3>2. Create a new environment with Brightway<a class="headerlink" href="#create-a-new-environment-with-brightway" title="Link to this heading">¶</a></h3>
-<p>Download the environment requirement file here: <a class="reference internal" href="#filepath"><span class="xref myst">bw_training.yml</span></a> <strong>TODO</strong> Add file path.</p>
-<p>Open a new terminal and run the following line:</p>
-<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda create -n bw25 -f C:\&lt;path_to_requirement_file&gt;\.yml
+</li>
+<li><p>Verify that Conda is well installed. The following command should just print its version number:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda -V
 </pre></div>
 </div>
-<p>This creates a new environment named <code class="docutils literal notranslate"><span class="pre">bw25</span></code> with Python version 3.11, Brightway 2.5, Activity-browser 3 and lca_algebraic_25.</p>
-<p>Note : we recommand keeping this file so that you can easily delete and recreate a fresh and clean environment for brightway 2.5.</p>
-<section id="activate-the-environment">
-<h4>2. Activate the environment<a class="headerlink" href="#activate-the-environment" title="Link to this heading">¶</a></h4>
-<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda activate brightway-env
-</pre></div>
-</div>
-<p>Now you’re <em>inside</em> your environment — any library you install will stay in this environment</p>
-<p>Note : we recommand keeping this file, so that you can easily delete and recreate a fresh and clean environment for brightway 2.5.</p>
+</li>
+</ol>
 </section>
-<section id="recreating-fresh-and-clean-environment">
-<h4>Recreating fresh and clean environment<a class="headerlink" href="#recreating-fresh-and-clean-environment" title="Link to this heading">¶</a></h4>
-<p>In case something goes wrong in your environment, you can always delete it and recreate a new clean one. No worries, this will not delete any of your Brightway projects or any other data. This will just uninstall all the libraries and delete.</p>
-<p>-&gt; Delete an environment:
--&gt; Recreate an environment</p>
-<p>–
-Footnote and sources:</p>
-<ul class="simple">
-<li><p>written with the help of ChatGPT</p></li>
-<li><p><a class="reference external" href="https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/">https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/</a></p></li>
-<li><p><a class="reference external" href="https://medium.com/data-science/what-is-a-python-environment-for-beginners-7f06911cf01a">https://medium.com/data-science/what-is-a-python-environment-for-beginners-7f06911cf01a</a></p></li>
-<li><p><a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">https://realpython.com/python-virtual-environments-a-primer/</a></p></li>
-</ul>
-</section>
-</section>
+<section id="install-visual-studio-code-and-extensions">
+<h2>2. Install Visual Studio Code and extensions<a class="headerlink" href="#install-visual-studio-code-and-extensions" title="Link to this heading">¶</a></h2>
+<p>Visual Studio Code (or <em>VS Code</em>) is a free, open-source code editor developed by Microsoft. It offers powerful features for code writing, debugging, Git integration, and a rich extension ecosystem to add functionnalities.</p>
+<ol class="arabic simple">
+<li><p>Install <strong>VS code</strong> from CEA’s software center. Open it when the installation is finished</p></li>
+<li><p>On the left sidebar, click the Extensions icon (looks like four squares).</p></li>
+<li><p>Search for the official ‘Python’ extension from Microsoft and install it.</p></li>
+<li><p>Repeat with the official Jupyter extension (also by Microsoft).</p></li>
+</ol>
 </section>
 </section>
 
@@ -314,23 +299,23 @@ Footnote and sources:</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="vscode.html">
+          <a class="next-page" href="setup_partB.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Installation of VS code</div>
+                <div class="title">II. Brightway</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../knowledge/brightway_th.html">
+          <a class="prev-page" href="python_env.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Brightway theory</div>
+                <div class="title">Python environments</div>
                 
               </div>
             </a>
@@ -364,16 +349,9 @@ Footnote and sources:</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Setting up a Python Environment for Brightway</a><ul>
-<li><a class="reference internal" href="#managing-python-environments-with-conda">⚙️ Managing Python Environments with Conda</a><ul>
-<li><a class="reference internal" href="#installing-conda">1. Installing Conda</a></li>
-<li><a class="reference internal" href="#create-a-new-environment-with-brightway">2. Create a new environment with Brightway</a><ul>
-<li><a class="reference internal" href="#activate-the-environment">2. Activate the environment</a></li>
-<li><a class="reference internal" href="#recreating-fresh-and-clean-environment">Recreating fresh and clean environment</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">I. Conda and VScode</a><ul>
+<li><a class="reference internal" href="#install-conda">1. Install Conda</a></li>
+<li><a class="reference internal" href="#install-visual-studio-code-and-extensions">2. Install Visual Studio Code and extensions</a></li>
 </ul>
 </li>
 </ul>
@@ -385,7 +363,7 @@ Footnote and sources:</p>
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
+</div><script src="../_static/documentation_options.js?v=5b3491d9"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

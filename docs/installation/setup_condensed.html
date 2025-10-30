@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="I. Activity Browser" href="../tutorials/activity-browser.html" /><link rel="prev" title="Setting up a Python Environment for Brightway" href="bw_env.html" />
-        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/installation/vscode.html" />
-        <link rel="prefetch" href="../_static/BW_black_transparent_square.png" as="image" />
-        <link rel="prefetch" href="../_static/BW_white_transparent_square.png" as="image" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Python environments" href="python_env.html" /><link rel="prev" title="Brightway theory" href="../knowledge/brightway_th.html" />
+        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/installation/setup_condensed.html" />
+        <link rel="prefetch" href="../_static/LOGO CEA_ORIGINAL.png" as="image" />
+        <link rel="prefetch" href="../_static/LOGO CEA_BLANC SUR NOIR.png" as="image" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Installation of VS code - Brightway training</title>
+        <title>Quickstart - Brightway training</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -181,7 +181,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -192,8 +192,8 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo only-light" src="../_static/BW_black_transparent_square.png" alt="Light Logo"/>
-    <img class="sidebar-logo only-dark" src="../_static/BW_white_transparent_square.png" alt="Dark Logo"/>
+    <img class="sidebar-logo only-light" src="../_static/LOGO CEA_ORIGINAL.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/LOGO CEA_BLANC SUR NOIR.png" alt="Dark Logo"/>
   </div>
   
   <span class="sidebar-brand-text">Brightway training</span>
@@ -204,15 +204,17 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Useful knowledge</span></p>
+  <p class="caption" role="heading"><span class="caption-text">About Brightway</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../knowledge/python_env.html">Python Environment for Brightway</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../knowledge/brightway_th.html">Brightway theory</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<p class="caption" role="heading"><span class="caption-text">Setup</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="bw_env.html">Setting up a Python Environment for Brightway</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation of VS code</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partA.html">I. Conda and VScode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partB.html">II. Brightway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partC.html">III. Ecoinvent</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -238,7 +240,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/installation/vscode.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/installation/setup_condensed.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -252,32 +254,76 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="installation-of-vs-code">
-<h1>Installation of VS code<a class="headerlink" href="#installation-of-vs-code" title="Link to this heading">¶</a></h1>
-<p>VS code is a IDE, an integrated development environment. It allows you to write, run and debug code. It also has a lot of extensions to add functionnalities. For exemple, using the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> extension, you can create write, run and debug <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebooks</span></code>. Notebooks are a combination of interactive code and text in the same document, making them well suited for tutorials, tests, exploration and presentation of codes.</p>
-<section id="install-vs-code">
-<h2>Install VS code<a class="headerlink" href="#install-vs-code" title="Link to this heading">¶</a></h2>
-<p>Go to the software center and install Visual Studio Code</p>
-</section>
-<section id="install-required-extensions">
-<h2>Install required extensions<a class="headerlink" href="#install-required-extensions" title="Link to this heading">¶</a></h2>
-<p>The extensions are located on the left sidebar.</p>
-<p>Search for the <code class="docutils literal notranslate"><span class="pre">Python</span></code> and the <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code> extensions and install them.</p>
-<p><img alt="Alt Text" src="../_images/vs_code-extensions.png" /></p>
-<p><img alt="Alt Text" src="images/vs_code-python_extensions.png" /></p>
-</section>
-<section id="vs-code-and-environments">
-<h2>VS code and environments<a class="headerlink" href="#vs-code-and-environments" title="Link to this heading">¶</a></h2>
-<p>When you run Python code in VS code, you must specify in which environment you want the code to be executed. In other word, you need to specify which Python interpreter (<code class="docutils literal notranslate"><span class="pre">Python.exe</span></code> file) you want to read your Python code.</p>
-<p>This can be done as on the pictures below</p>
-<p><img alt="Alt Text" src="../_images/tuto_VScode.png" /></p>
-</section>
+          <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p><strong><em>NOTE:</em></strong><br />
+This is a summary of all the setup steps.<br />
+It is totally equivalent to going through the Setup pages I. to III., but without the explanations.<br />
+If you prefer having the explanations, please follow the pages I. to III. (since it is totally equivalent).</p>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Install <strong>Miniforge</strong> from CEA’s software center.</p></li>
+<li><p>Open a terminal and activate <strong>Conda</strong> commands on your computer by running:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda init
+</pre></div>
+</div>
+</li>
+<li><p>Verify that Conda is well installed. The following command should just print its version number:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda -V
+</pre></div>
+</div>
+</li>
+<li><p>Install <strong>VS code</strong> from CEA’s software center. Open it when the installation is finished</p></li>
+<li><p>On the left sidebar, click the ‘Extensions’ icon (looks like four squares).</p></li>
+<li><p>Search for the official ‘Python’ extension from Microsoft and install it.</p></li>
+<li><p>Repeat with the official Jupyter extension (also by Microsoft).</p></li>
+<li><p>Download the <a class="reference download internal" download="" href="../_downloads/b97187f06a39f9a7d8588f6d54815b4e/bw25_training.yml"><span class="xref download myst">environment requirements file</span></a> and save it somewhere convenient.</p></li>
+<li><p>Open a new terminal, go to the location where you saved the file (<code class="docutils literal notranslate"><span class="pre">cd</span></code> command) and run the following command:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda create -n bw25 -f bw25_training.yml
+</pre></div>
+</div>
+</li>
+<li><p>Activate the environment by running the conda <code class="docutils literal notranslate"><span class="pre">activate</span></code> command:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda activate bw25
+</pre></div>
+</div>
+</li>
+<li><p>Verify the installation by running the <code class="docutils literal notranslate"><span class="pre">activity-browser</span></code> command, which should open Activity-Browser.</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>activity-browser
+</pre></div>
+</div>
+</li>
+<li><p>You can then deactivate your environment by running:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda deactivate
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference download internal" download="" href="../_downloads/2e670fbbc51089ec81e915b88b8c386e/import_ecoinvent.py"><span class="xref download myst">Download the import_ecoinvent.py</span></a> Python file.</p></li>
+<li><p>Open VS Code, and open the <code class="docutils literal notranslate"><span class="pre">import_ecoinvent.py</span></code> file (‘File’ -&gt; ‘Open File’, or ‘ctrl + O’)</p></li>
+<li><p>Select the Python interpreter from your <code class="docutils literal notranslate"><span class="pre">bw25</span></code> environment:</p>
+<ol class="arabic simple">
+<li><p>‘Ctrl + shift + P’ to open the command menu</p></li>
+<li><p>Search for the command ‘Python: Select Interpreter’ and click on it</p></li>
+<li><p>Click ‘Enter interpreter path…’</p></li>
+<li><p>Click ‘Find’</p></li>
+<li><p>Browse for the <code class="docutils literal notranslate"><span class="pre">Python.exe</span></code> file in your <code class="docutils literal notranslate"><span class="pre">bw25</span></code> Python environment, and select this interpreter.</p></li>
+</ol>
+<p>Now you should see at the bottom right corner of VS code that the <code class="docutils literal notranslate"><span class="pre">bw25</span></code> interpreter has been selected.</p>
+<p><img alt="alt text" src="../_images/image-3.png" /></p>
+</li>
+<li><p>Run the file by clicking the ‘Play’ button (top right corner)</p>
+<p>WATCH OUT: the script takes ca. 20 minutes to run. It is mandatory that you do this when connected to the CEA servers, preferably on site and not in VPN.
+You MUST have a FAST and STEADY INTERNET CONNECTION.</p>
+</li>
+<li><p>Verify in the terminal that there is no error message when the execution is finished.</p></li>
+</ol>
 </section>
 
         </article>
@@ -285,23 +331,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../tutorials/activity-browser.html">
+          <a class="next-page" href="python_env.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">I. Activity Browser</div>
+                <div class="title">Python environments</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="bw_env.html">
+          <a class="prev-page" href="../knowledge/brightway_th.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Setting up a Python Environment for Brightway</div>
+                <div class="title">Brightway theory</div>
                 
               </div>
             </a>
@@ -323,34 +369,13 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Installation of VS code</a><ul>
-<li><a class="reference internal" href="#install-vs-code">Install VS code</a></li>
-<li><a class="reference internal" href="#install-required-extensions">Install required extensions</a></li>
-<li><a class="reference internal" href="#vs-code-and-environments">VS code and environments</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
+</div><script src="../_static/documentation_options.js?v=5b3491d9"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

@@ -40,19 +40,21 @@ index
 ```
 
 ```{toctree}
-:caption: Useful knowledge 
+:caption: About Brightway
 :hidden:
 
-knowledge/python_env
 knowledge/brightway_th
 ```
 
 ```{toctree}
-:caption: Getting started 
+:caption: Setup
 :hidden:
 
-installation/bw_env
-installation/vscode
+installation/setup_condensed
+installation/python_env
+installation/setup_partA
+installation/setup_partB
+installation/setup_partC
 ```
 
 ```{toctree}

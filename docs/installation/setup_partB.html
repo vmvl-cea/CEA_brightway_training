@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Brightway theory" href="brightway_th.html" /><link rel="prev" title="CEA Brightway training" href="../index.html" />
-        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/knowledge/python_env.html" />
-        <link rel="prefetch" href="../_static/BW_black_transparent_square.png" as="image" />
-        <link rel="prefetch" href="../_static/BW_white_transparent_square.png" as="image" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="III. Ecoinvent" href="setup_partC.html" /><link rel="prev" title="I. Conda and VScode" href="setup_partA.html" />
+        <link rel="canonical" href="https://vmvl-cea.github.io/CEA_brightway_training/installation/setup_partB.html" />
+        <link rel="prefetch" href="../_static/LOGO CEA_ORIGINAL.png" as="image" />
+        <link rel="prefetch" href="../_static/LOGO CEA_BLANC SUR NOIR.png" as="image" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
-        <title>Python Environment for Brightway - Brightway training</title>
+        <title>II. Brightway - Brightway training</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -192,8 +192,8 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo only-light" src="../_static/BW_black_transparent_square.png" alt="Light Logo"/>
-    <img class="sidebar-logo only-dark" src="../_static/BW_white_transparent_square.png" alt="Dark Logo"/>
+    <img class="sidebar-logo only-light" src="../_static/LOGO CEA_ORIGINAL.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/LOGO CEA_BLANC SUR NOIR.png" alt="Dark Logo"/>
   </div>
   
   <span class="sidebar-brand-text">Brightway training</span>
@@ -204,15 +204,17 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Useful knowledge</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python Environment for Brightway</a></li>
-<li class="toctree-l1"><a class="reference internal" href="brightway_th.html">Brightway theory</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+  <p class="caption" role="heading"><span class="caption-text">About Brightway</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../installation/bw_env.html">Setting up a Python Environment for Brightway</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../installation/vscode.html">Installation of VS code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../knowledge/brightway_th.html">Brightway theory</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Setup</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup_condensed.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_env.html">Python environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partA.html">I. Conda and VScode</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">II. Brightway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup_partC.html">III. Ecoinvent</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -238,7 +240,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/knowledge/python_env.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/installation/setup_partB.md.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -258,33 +260,61 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="python-environment-for-brightway">
-<h1>Python Environment for Brightway<a class="headerlink" href="#python-environment-for-brightway" title="Link to this heading">¶</a></h1>
-<p>To use Brightway on your computer, we install it in a specific <strong>Python Envrionment</strong>. This is a general Python good practice, allowing to keep a clean version of Brightway (and all the packages it requires) isolated from any other Python project you may have.</p>
-<section id="what-is-a-python-environment">
-<h2>What is a Python Environment?<a class="headerlink" href="#what-is-a-python-environment" title="Link to this heading">¶</a></h2>
-<p>A <strong>Python environment</strong> is like a <em>workspace</em> where you can install and use specific Python tools and libraries without interfering with other projects on your computer.</p>
-<p>Think of it as a <strong>sandbox</strong> that keeps everything isolated:</p>
+          <section id="ii-brightway">
+<h1>II. Brightway<a class="headerlink" href="#ii-brightway" title="Link to this heading">¶</a></h1>
+<section id="install-brightway-in-a-dedicated-environment">
+<h2>1. Install Brightway in a dedicated environment<a class="headerlink" href="#install-brightway-in-a-dedicated-environment" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Download the <a class="reference download internal" download="" href="../_downloads/b97187f06a39f9a7d8588f6d54815b4e/bw25_training.yml"><span class="xref download myst">environment requirements file</span></a> and save it somewhere convenient.</p></li>
+<li><p>Open a new terminal, go to the location where you saved the file (<code class="docutils literal notranslate"><span class="pre">cd</span></code> command) and run the following command:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda create -n bw25 -f bw25_training.yml
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This will create a new environment named <code class="docutils literal notranslate"><span class="pre">bw25</span></code> and install Brightway and other libraries, as specified in the YAML file:</p>
 <ul class="simple">
-<li><p>Each environment have its <strong>own version of Python</strong> (e.g., 3.10 vs. 3.12), which can thus be different than the base one on your computer.</p></li>
-<li><p>Each environment have <strong>its own set of packages</strong> (e.g., Brightway, NumPy, Pandas, etc.).</p></li>
-<li><p>This prevents conflicts — for example, one project might need an older library version, while another needs the latest one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Python=3.12</span></code></p></li>
+<li><p>latest version of <code class="docutils literal notranslate"><span class="pre">Brightway25</span></code></p></li>
+<li><p>latest version of <code class="docutils literal notranslate"><span class="pre">Activity-browser</span></code> compatible with Brightway 2.5</p></li>
+<li><p>latest version of <code class="docutils literal notranslate"><span class="pre">Lca-algebraic-25</span></code></p></li>
+<li><p>a couple of other useful libraries</p></li>
 </ul>
-<p>This isolation is especially useful in scientific computing, where different tools often have strict package version requirements.</p>
-<p>You will see later how to create and manage this environment.</p>
-<p>On your computer, you can have as many python environment as you wish, in addition to the <code class="docutils literal notranslate"><span class="pre">base</span></code> one (the one used by default).</p>
-<p><img alt="Alt Text" src="../_images/python_virtual_environments.png" /></p>
-<p>They are stored locally in your computer, typically here : <code class="docutils literal notranslate"><span class="pre">C:\Users\AB123456\AppData\Local\miniforge3\envs</span></code>. Inside this folder, there is the Python executable <code class="docutils literal notranslate"><span class="pre">python.exe</span></code> of the Python version of the environment. There is also the code of all the librairies and packages (in <code class="docutils literal notranslate"><span class="pre">env_name\lib\site-package</span></code>). This is why you can have a different version of Python and different versions of the libraries in each environment.</p>
+<p>Note: You can name your environment differently by replacing <code class="docutils literal notranslate"><span class="pre">bw25</span></code> with the name of your choice.</p>
 </section>
-<section id="python-environment-and-brightway-projects">
-<h2>Python Environment and Brightway Projects<a class="headerlink" href="#python-environment-and-brightway-projects" title="Link to this heading">¶</a></h2>
-<p><strong>Python Environments</strong> on your computers are just workspaces in which to run python files and python-based software. These files and folders are independant from the environments. Thus:</p>
-<ul class="simple">
-<li><p>Creating or deleting Python environments has no impact on other projects files and folders, e.g. Brightway files and folders</p></li>
-<li><p>Creating or deleting files and folders related to python-based software has no impact on Python environments.</p></li>
-</ul>
-<p>Brightway projects files are each stored in project-folders on your computers, usually here: <code class="docutils literal notranslate"><span class="pre">C:\Users\AB123456\AppData\Local\pylca\Brightway3</span></code></p>
-<p><strong>TODO</strong> Picture with bw files and folders compared to python env files and folders.</p>
+<section id="verify-the-environment">
+<h2>2. Verify the environment<a class="headerlink" href="#verify-the-environment" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Activate the environment by running the conda <code class="docutils literal notranslate"><span class="pre">activate</span></code> command:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda activate bw25
+</pre></div>
+</div>
+<p>You then see that the environment is active as its name should appear in parenthesis.</p>
+</li>
+<li><p>Verify the installation by running the <code class="docutils literal notranslate"><span class="pre">activity-browser</span></code> command, which should open Activity-Browser.</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>activity-browser
+</pre></div>
+</div>
+</li>
+<li><p>You can then deactivate your environment by running:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda deactivate
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="recreating-fresh-and-clean-environment">
+<h2>Recreating fresh and clean environment<a class="headerlink" href="#recreating-fresh-and-clean-environment" title="Link to this heading">¶</a></h2>
+<p>In case something goes wrong in your environment, you can always delete it and recreate a clean new one. No worries, this will not delete any of your Brightway projects or any other data. This will just uninstall all the libraries and delete.</p>
+<ol class="arabic">
+<li><p>Delete your <code class="docutils literal notranslate"><span class="pre">bw25</span></code> environment by running:</p>
+<div class="highlight-cmd notranslate"><div class="highlight"><pre><span></span>conda env remove -n bw25
+</pre></div>
+</div>
+<p>Note: for the <code class="docutils literal notranslate"><span class="pre">remove</span></code> command to work, you must be outside of the environment.</p>
+</li>
+<li><p>Repeat the environment creation steps.</p></li>
+</ol>
 </section>
 </section>
 
@@ -293,23 +323,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="brightway_th.html">
+          <a class="next-page" href="setup_partC.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Brightway theory</div>
+                <div class="title">III. Ecoinvent</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="setup_partA.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">I. Conda and VScode</div>
                 
               </div>
             </a>
@@ -343,9 +373,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Python Environment for Brightway</a><ul>
-<li><a class="reference internal" href="#what-is-a-python-environment">What is a Python Environment?</a></li>
-<li><a class="reference internal" href="#python-environment-and-brightway-projects">Python Environment and Brightway Projects</a></li>
+<li><a class="reference internal" href="#">II. Brightway</a><ul>
+<li><a class="reference internal" href="#install-brightway-in-a-dedicated-environment">1. Install Brightway in a dedicated environment</a></li>
+<li><a class="reference internal" href="#verify-the-environment">2. Verify the environment</a></li>
+<li><a class="reference internal" href="#recreating-fresh-and-clean-environment">Recreating fresh and clean environment</a></li>
 </ul>
 </li>
 </ul>
@@ -357,7 +388,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=2709fde1"></script>
+</div><script src="../_static/documentation_options.js?v=5b3491d9"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=46bd48cc"></script>

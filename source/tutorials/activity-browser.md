@@ -4,16 +4,22 @@
 
 ### Open Activity-Browser
 
-Use commands in the Miniforge prompt:
-• Search Miniforge prompt and open it
-• Run the following commands (replace conda with micromamba if you have it installed):
-conda a c t i v a t e bw2
-a c t i v i t y −browser
-and wait few seconds. "bw2" is the environment’s name where AB is installed.
+1. Open a windows terminal
+2. Activate your Brightway environment:
+
+    ```cmd
+    conda activate bw25
+    ```
+
+3. Run Activity Browser
+
+    ```cmd
+    activity-browser
+    ```
 
 ### Import data
 
-A partial LCA modelisation has been created on AB for this TP. You will download source files and install them on AB.
+A partial LCA model has been created on AB for this training. You can download its source file here: .
 Download source files:
 S:\370-Energie\370.25-BATTERIES\370.25.311-Formation_Brightway\tuto_EV
 Import project:
@@ -98,7 +104,6 @@ Is the efficiency of the vehicle a significant factor in LCA results? For all yo
 
 ### Add scenarios
 
-effivciency
 efficiency
 
 Use a pre-built scenario:

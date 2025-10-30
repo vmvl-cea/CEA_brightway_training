@@ -1,0 +1,76 @@
+# Quickstart
+
+> **_NOTE:_**  
+> This is a summary of all the setup steps.  
+> It is totally equivalent to going through the Setup pages I. to III., but without the explanations.  
+> If you prefer having the explanations, please follow the pages I. to III. (since it is totally equivalent).  
+
+1. Install **Miniforge** from CEA's software center.
+
+2. Open a terminal and activate **Conda** commands on your computer by running:
+
+    ```cmd
+    conda init
+    ```
+
+3. Verify that Conda is well installed. The following command should just print its version number:
+
+    ```cmd
+    conda -V
+    ```
+
+4. Install **VS code** from CEA's software center. Open it when the installation is finished
+
+5. On the left sidebar, click the 'Extensions' icon (looks like four squares).
+
+6. Search for the official 'Python' extension from Microsoft and install it.
+
+7. Repeat with the official Jupyter extension (also by Microsoft).
+
+8. Download the [environment requirements file](./bw25_training.yml) and save it somewhere convenient.
+
+9. Open a new terminal, go to the location where you saved the file (`cd` command) and run the following command:
+
+    ```cmd
+    conda create -n bw25 -f bw25_training.yml
+    ```
+
+10. Activate the environment by running the conda `activate` command:
+
+    ```cmd
+    conda activate bw25
+    ```
+
+11. Verify the installation by running the `activity-browser` command, which should open Activity-Browser.
+
+    ```cmd
+    activity-browser
+    ```
+
+12. You can then deactivate your environment by running:
+
+    ```cmd
+    conda deactivate
+    ```
+
+13. [Download the import_ecoinvent.py](import_ecoinvent.py) file.
+
+14. Open VS Code, and open the `import_ecoinvent.py` file ('File' -> 'Open File', or 'ctrl + O')
+
+15. Select the Python interpreter from your `bw25` environment:
+    1. 'Ctrl + shift + P' to open the command menu
+    2. Search for the command 'Python: Select Interpreter' and click on it
+    3. Click 'Enter interpreter path...'
+    4. Click 'Find'
+    5. Browse for the `Python.exe` file in your `bw25` Python environment, and select this interpreter.
+
+    Now you should see at the bottom right corner of VS code that the `bw25` interpreter has been selected.
+
+    ![alt text](image-3.png)
+
+16. Run the file by clicking the 'Play' button (top right corner)
+
+    WATCH OUT: the script takes ca. 20 minutes to run. It is mandatory that you do this when connected to the CEA servers, preferably on site and not in VPN.
+    You MUST have a FAST and STEADY INTERNET CONNECTION.
+
+17. Verify in the terminal that there is no error message when the execution is finished.

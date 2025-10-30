@@ -29,8 +29,10 @@ html_theme = "furo"
 html_title = "Brightway training"
 html_static_path = ["_static"]
 html_theme_options = {
-    "light_logo": "BW_black_transparent_square.png",
-    "dark_logo": "BW_white_transparent_square.png",
+    "light_logo": "LOGO CEA_ORIGINAL.png",
+    "dark_logo": "LOGO CEA_BLANC SUR NOIR.png",
 }
 
 html_baseurl = "https://vmvl-cea.github.io/CEA_brightway_training/"
+
+html_copy_source = 1

@@ -1,0 +1,15 @@
+name: bw25_tr
+channels:
+  - conda-forge
+  - cmutel
+  - nodefaults
+dependencies:
+  - python=3.12
+  - brightway25  # From cmutel channel
+  - jupyterlab   # From conda-forge channel
+  - plotly
+  - seaborn
+  - pip
+  - pip:
+    - activity-browser           # From PyPI, avtivity-browser 3 compatible with bw25
+    - lca-algebraic-bw25         # From PyPI

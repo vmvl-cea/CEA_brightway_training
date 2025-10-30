@@ -1,5 +1,5 @@
 conda activate bw25
 jupyter nbconvert --to markdown ./source/tutorials/bw25_notebook_EV.ipynb
-sphinx-build -b html -D html_copy_source=1 source/ docs/
+sphinx-build -b html -E source/ docs/
 cd build/
 build/index.html
