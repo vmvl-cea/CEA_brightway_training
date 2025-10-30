@@ -2,7 +2,7 @@
 
 To use Brightway on your computer, we install it in a specific **Python Envrionment**. This is a general Python good practice, allowing to keep a clean version of Brightway (and all the packages it requires) isolated from any other Python project you may have.
 
-## 🐍 What is a Python Environment?
+## What is a Python Environment?
 
 A **Python environment** is like a *workspace* where you can install and use specific Python tools and libraries without interfering with other projects on your computer.
 
