@@ -27,14 +27,10 @@ exclude_patterns = []
 
 html_theme = "furo"
 html_title = "Brightway training"
-html_static_path = ["https://vmvl-cea.github.io/CEA_brightway_training/_static"]
+html_static_path = ["_static"]
 html_theme_options = {
     "light_logo": "BW_black_transparent_square.png",
     "dark_logo": "BW_white_transparent_square.png",
-}
-html_context = {
-    "license_name": "Creative Commons Attribution 4.0 International",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
 }
 
 html_baseurl = "https://vmvl-cea.github.io/CEA_brightway_training/"
